@@ -1,5 +1,8 @@
+var cFunctions = require("../utils/crawlerFunctions");
+
 function searchItems(req, res, next) {
     
+    cFunctions.scrap(res, next)
     res.data = [{
         name: 1,
         link: "as",
@@ -15,7 +18,7 @@ function searchItems(req, res, next) {
         state: "asdasd"
     }]
 
-    next()
+    //next()
 }
 
 module.exports = {
