@@ -1,0 +1,18 @@
+swagger: "2.0"
+info:
+  description: "NodeJS Crawler for scrap ml list products"
+  title: "Endpoints do search items"
+  version: "1.0.0"
+paths: 
+  /search/items:
+    post:
+      operationId: 'getItemsByName'
+      description: Returns items that matches with the search string in the body request
+      produces:
+      - application/json
+      responses:
+        '200':
+          description: 'A list of items'
+          schema:
+            type: array
+host: "ml-nodejs-webcrawler.appspot.com"
