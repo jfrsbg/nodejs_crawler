@@ -1,0 +1,4 @@
+{"message":{"requestedUrl":"/items/search","ipAddress":"::1","params":{"search":"fone","limit":30},"date":"2020-08-01 10:10:18"},"level":"info"}
+{"message":{"requestedUrl":"/items/search","ipAddress":"::1","params":{"search":"fone","limit":30},"date":"2020-08-01 10:11:58"},"level":"info"}
+{"message":"123132","level":"error"}
+{"message":{"requestedUrl":"/items/search","ipAddress":"::1","params":{"search":"fone","limit":30},"date":"2020-08-01 10:16:33"},"level":"info"}

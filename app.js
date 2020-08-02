@@ -4,6 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+var winston = require('./config/winston_logger');
+
 var itemsRouter = require('./routes/items');
 
 var app = express();
@@ -26,6 +28,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//endpoint group to items
 app.use('/items', itemsRouter);
 
 // catch 404 and forward to error handler

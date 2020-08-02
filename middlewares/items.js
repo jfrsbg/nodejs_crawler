@@ -1,7 +1,18 @@
 var cheerio = require("cheerio");
 var axios = require("axios");
+var appRoot = require('app-root-path');
+var winston = require(`${appRoot}/config/winston_logger`);
 
 async function searchItems(req, response, next) {
+    winston.logRequest(req)
+
+    //verify if search and limit properties exists
+    if(req.body.limit == undefined || req.body.search == undefined){
+        response.data = {invalid_input: "You must provide a valid JSON body"}
+        response.status(400)
+        next()
+    }
+
     var limit = req.body.limit
     
     //url of website
@@ -14,7 +25,6 @@ async function searchItems(req, response, next) {
     while(items.length < limit){
         //you can jump the number of items that you already seen with the string "_Desde_51" for example
         var fullUrl = URL+req.body.search.split(" ").join("-")+`_Desde_${items.length}`
-        console.log(fullUrl)
 
         var result = await axios.get(fullUrl)
 
