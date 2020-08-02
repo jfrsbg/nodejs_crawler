@@ -6,7 +6,7 @@ Crawler to search items on mercado livre
 Clone the repository, enter in the directory and type 'npm run dev' to run in debug mode
 
 ### Making requests
-This project has only one endpoint and you can access the live example on ml-nodejs-webcrawler.appspot.com/items/search sending a POST HTTP request with the following body:
+This project has only one endpoint and you can access the live example on https://ml-nodejs-webcrawler.appspot.com/items/search sending a POST HTTP request with the following body:
 
 ```
 {
